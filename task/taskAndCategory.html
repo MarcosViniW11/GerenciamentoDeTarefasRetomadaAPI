@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Tarefas | Gerenciamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <div>
+            <p class="eyebrow">Painel</p>
+            <h1>Minhas Tarefas</h1>
+            <p class="subtitle">Organize suas atividades e categorias em uma só tela.</p>
+        </div>
+        <button type="button" id="logout">Sair</button>
+    </header>
+
+    <main class="dashboard">
+        <section class="panel card">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Categorias</p>
+                    <h2>Gerenciar categorias</h2>
+                </div>
+            </div>
+            <div class="category-create">
+                <input type="text" id="categoryName" placeholder="Nova categoria" aria-label="Nome da nova categoria">
+                <button type="button" id="createCategoryButton">Criar categoria</button>
+            </div>
+            <ul id="listCategories" class="category-list"></ul>
+        </section>
+
+        <section class="panel card tasks-panel">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Tarefas</p>
+                    <h2>Adicionar nova tarefa</h2>
+                </div>
+                <div id="pageMessage" class="message"></div>
+            </div>
+
+            <form id="formTarefa" class="task-form" novalidate>
+                <input type="text" id="taskTitulo" placeholder="O que precisa ser feito?" required>
+                <select id="taskCatId">
+                    <option value="">Categoria...</option>
+                </select>
+                <textarea id="descricao" placeholder="Adicione uma descrição"></textarea>
+                <button type="submit" class="primary-button">Criar tarefa</button>
+            </form>
+
+            <div id="listaTarefas" class="task-grid"></div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Feito por Marcos Rocha</p>
+    </footer>
+
+    <script src="taskAndCategory.js"></script>
+</body>
+
+</html>

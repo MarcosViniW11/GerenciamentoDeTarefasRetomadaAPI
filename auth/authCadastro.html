@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <main class="auth-shell">
+        <section class="auth-panel">
+            <header class="auth-header">
+                <p class="eyebrow">Comece a organizar</p>
+                <h1>Cadastre-se agora</h1>
+                <p class="subtitle">Crie sua conta para gerenciar tarefas e categorias com segurança.</p>
+            </header>
+
+            <form id="form-cadastro" class="auth-form" novalidate>
+                <div class="field-group">
+                    <label for="nome-id">Nome completo</label>
+                    <input type="text" id="nome-id" placeholder="Seu nome" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="email-id">E-mail</label>
+                    <input type="email" id="email-id" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="senha-id">Senha</label>
+                    <div class="password-row">
+                        <input type="password" id="senha-id" placeholder="Crie uma senha" required>
+                        <button type="button" class="icon-button" id="btnToggle"
+                            aria-label="Alternar visibilidade da senha">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+                    <p class="hint">Senha mínima de 6 caracteres.</p>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="primary-button">Cadastrar</button>
+                </div>
+
+                <p id="message" class="message" aria-live="polite"></p>
+            </form>
+
+            <p class="auth-helper">Já possui cadastro? <a href="authLogin.html">Entre na sua conta</a></p>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Feito por Marcos Rocha</p>
+    </footer>
+    <script src="cadastro.js"></script>
+</body>
+
+</html>
